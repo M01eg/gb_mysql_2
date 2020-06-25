@@ -7,8 +7,8 @@ SELECT
   umr.body  review,
   m.title   movie_title
 FROM user_movie_reviews umr
-	JOIN users u ON umr.user_id = u.id 
-	JOIN movies m ON umr.movie_id = m.id
+    JOIN users u ON umr.user_id = u.id 
+    JOIN movies m ON umr.movie_id = m.id
 WHERE umr.moderator_approved = TRUE;
 
 
@@ -19,4 +19,4 @@ SELECT
   g.name genre_name
 FROM movies m
     JOIN movies_genres mg ON m.id = mg.movie_id
-	JOIN genres g on mg.genre_id = g.id
+    JOIN genres g on mg.genre_id = g.id
