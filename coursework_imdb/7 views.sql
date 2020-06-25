@@ -12,7 +12,8 @@ FROM user_movie_reviews umr
 WHERE umr.moderator_approved = TRUE;
 
 
--- Представление: жанры фильмов. 
+-- Представление: жанры фильмов.
+DROP VIEW IF EXISTS genres_movies_view;
 CREATE OR REPLACE VIEW genres_movies_view AS  
 SELECT 
   m.title movie_title,
